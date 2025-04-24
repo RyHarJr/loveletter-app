@@ -5,30 +5,31 @@ const Main = () => {
     const router = useRouter()
     
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4 py-8">
             <Image
                 src="/images/kucing.jpg"
                 alt="Kucing"
                 width={200}
                 height={200}
-                className="rounded-full overflow-hidden shadow-lg mb-4"
+                className="rounded-full shadow-lg mb-6"
             />
-            <h1 className="text-3xl font-bold mb-4 text-gray-800">Welcome Love Letter App</h1>
-            <p className="text-lg text-gray-600 font-semibold mb-4 flex text-center">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-800 text-center">
+                Welcome Love Letter App
+            </h1>
+            <p className="text-base sm:text-lg text-gray-600 font-semibold mb-6 text-center max-w-xl">
                 Ini adalah aplikasi Love Letter yang dibuat dengan React dan Tailwind CSS.
-                <br />
-                Aplikasi ini adalah aplikasi yang digunakan untuk mengirimkan surat cinta kepada orang yang kita cintai.
+                Aplikasi ini digunakan untuk mengirimkan surat cinta kepada orang yang kita cintai.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex flex-col sm:flex-row gap-4">
                 <button 
                     onClick={() => router.push('/form/')}
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded w-full sm:w-auto"
                 >
                     Kirim Surat Cinta
                 </button>
                 <button 
                     onClick={() => router.push('/list/')}
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded"
+                    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded w-full sm:w-auto"
                 >
                     Lihat Surat Cinta
                 </button>
